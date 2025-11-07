@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "193579992169",
-    "project_id": "btfdemoappone",
-    "storage_bucket": "btfdemoappone.firebasestorage.app"
+    "project_number": "293986053377",
+    "project_id": "btfdemoappone-f17e3",
+    "storage_bucket": "btfdemoappone-f17e3.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:193579992169:android:f2e05a615d58ed45330ef8",
+        "mobilesdk_app_id": "1:293986053377:android:e63c9c3ca778572814bf00",
         "android_client_info": {
           "package_name": "com.btfdemoappone"
         }
       },
       "oauth_client": [
         {
-          "client_id": "193579992169-g1oqk1k9nvbgrpl3auug9eqb9kij1i7c.apps.googleusercontent.com",
+          "client_id": "293986053377-l4ugsr00tpq8du4r54ar15p653787kdh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.btfdemoappone",
-            "certificate_hash": "199dd536303d6168d9d8db5de4a39f222c6cd8fd"
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
           }
         },
         {
-          "client_id": "193579992169-l9ojs877dnkovn2stu9262pi9bgts7bk.apps.googleusercontent.com",
+          "client_id": "293986053377-l5bjdp2ifq682mo3a4pf12ruv47qe5vp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBweL4ZNdbnXwIGDlattfGvejXMmr4RxAM"
+          "current_key": "AIzaSyDhcBthcQA8IC5VbpU0zSLOCgzEaJAPwTk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "193579992169-l9ojs877dnkovn2stu9262pi9bgts7bk.apps.googleusercontent.com",
+              "client_id": "293986053377-l5bjdp2ifq682mo3a4pf12ruv47qe5vp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

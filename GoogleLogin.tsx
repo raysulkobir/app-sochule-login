@@ -5,7 +5,7 @@ import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-si
 export default function GoogleLogin() {
     useEffect(() => {
         GoogleSignin.configure({
-            webClientId: '193579992169-l9ojs877dnkovn2stu9262pi9bgts7bk.apps.googleusercontent.com',
+            webClientId: '293986053377-l5bjdp2ifq682mo3a4pf12ruv47qe5vp.apps.googleusercontent.com',
             offlineAccess: true,
         });
     }, []);
@@ -15,7 +15,7 @@ export default function GoogleLogin() {
             await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
             const userInfo = await GoogleSignin.signIn();
             console.log('userInfo', userInfo);
-            Alert.alert('Success', `Welcome ${userInfo.user.name}`);
+            Alert.alert('Success', `Welcome ${userInfo}`);
         } catch (error: any) {
             console.error(error);
 

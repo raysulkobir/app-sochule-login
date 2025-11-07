@@ -1,0 +1,103 @@
+GoogleLogin.tsx
+
+import React, { useEffect } from 'react';
+import { Text, TouchableOpacity, StyleSheet, View, Alert } from 'react-native';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
+
+
+export default function GoogleLogin() {
+   useEffect(() => {
+       GoogleSignin.configure({
+           webClientId: '350785063723-use7k029gvugvrm1646t0eel0bi0m77c.apps.googleusercontent.com',
+           offlineAccess: true,
+       });
+   }, []);
+
+
+   const signInWithGoogle = async () => {
+       try {
+           await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+           const userInfo = await GoogleSignin.signIn();
+           console.log('userInfo', userInfo);
+       } catch (error: any) {
+           console.error(error);
+           Alert.alert('Sign-in failed', error?.message ?? String(error));
+       }
+   };
+
+
+   return (
+       <View style={styles.container}>
+           <TouchableOpacity onPress={signInWithGoogle}>
+               <Text style={styles.text}>Hi</Text>
+           </TouchableOpacity>
+       </View>
+   );
+}
+
+
+const styles = StyleSheet.create({
+   container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+   text: { fontSize: 32, fontWeight: 'bold' },
+});
+
+
+
+
+Package: 
+
+
+ "@react-native-google-signin/google-signin": "^16.0.0",
+   "@react-native/new-app-screen": "0.82.1",
+   "@react-navigation/native": "^7.1.19",
+   "@react-navigation/native-stack": "^7.6.2",
+
+
+"react-native-safe-area-context": "^5.6.2",
+   "react-native-screens": "^4.18.0"
+
+
+
+
+Guild.gradle
+
+dependencies {
+    // The version of react-native is set by the React Native Gradle Plugin
+    implementation("com.facebook.react:react-android")
+    implementation 'com.google.android.gms:play-services-auth:21.3.0'
+
+    if (hermesEnabled.toBoolean()) {
+        implementation("com.facebook.react:hermes-android")
+    } else {
+        implementation jscFlavor
+    }
+}
+
+
+User: /Users/bangladeshthalassemiafoundation/Documents/app/DonorTest/android/app/google-services.json
+
+
+
+
+gradlew signingReport
+./gradlew clean
+
+gradle signingReport
+
+
+// app login ios
+/Users/bangladeshthalassemiafoundation/Documents/app/btfDemoAppOne/ios/btfDemoAppOne/GoogleService-Info.plist
+/Users/bangladeshthalassemiafoundation/Documents/app/btfDemoAppOne/ios/btfDemoAppOne/GoogleService-Info.plist
+
+/Users/bangladeshthalassemiafoundation/Documents/app/btfDemoAppOne/ios/btfDemoAppOne/PrivacyInfo.xcprivacy
+sume change 
+    work this code:
+    xcode
+        open 
+            then
+            targe
+                Info
+                    URL Types:
+
+                        com.googleusercontent.apps.293986053377-6jup8b06g68krbiforieola5is94nm4s
+
