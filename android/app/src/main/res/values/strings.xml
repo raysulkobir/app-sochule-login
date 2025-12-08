@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">btfDemoAppOne</string>
+
+
+<string name="facebook_app_id">1527541168483203</string>
+<string name="fb_login_protocol_scheme">fb1527541168483203</string>
+<string name="facebook_client_token">d71ca476b5079e7cc7cab05eea1069ab</string>
+
+
 </resources>
