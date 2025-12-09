@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Text, TouchableOpacity, StyleSheet, View, Alert } from 'react-native';
 import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-signin';
+import { LoginManager, AccessToken, Profile } from 'react-native-fbsdk-next';
 
 export default function GoogleLogin() {
     useEffect(() => {
@@ -9,6 +10,7 @@ export default function GoogleLogin() {
             offlineAccess: true,
         });
     }, []);
+    
 
     const signInWithGoogle = async () => {
         try {
@@ -31,11 +33,49 @@ export default function GoogleLogin() {
             }
         }
     };
+    const loginWithFacebook = async () => {
+        try {
+            const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
+
+            if (result.isCancelled) {
+                console.log('Facebook login cancelled');
+                return;
+            }
+
+            const data = await AccessToken.getCurrentAccessToken();
+            if (!data) {
+                console.log('Something went wrong obtaining Facebook access token');
+                return;
+            }
+
+            const profile = await Profile.getCurrentProfile();
+            console.log('Facebook profile:', profile);
+
+
+            const userData = {
+                id: profile?.userID,
+                firstName: profile?.firstName,
+                lastName: profile?.lastName,
+                email: profile?.email,
+                token: data.accessToken.toString(),
+                provider: 'facebook',
+                photo: profile?.imageURL
+            };
+console.log('userData', userData);
+           
+        } catch (error) {
+            console.error('Facebook Login Error', error);
+            
+        }
+    };
 
     return (
         <View style={styles.container}>
             <TouchableOpacity onPress={signInWithGoogle} style={styles.button}>
                 <Text style={styles.text}>Sign in with Google</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={loginWithFacebook} style={[styles.button,{marginTop: 16}]}>
+                <Text style={styles.text}>Sign in with facebook</Text>
             </TouchableOpacity>
         </View>
     );
