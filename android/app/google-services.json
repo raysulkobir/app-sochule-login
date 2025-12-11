@@ -37,6 +37,13 @@
             {
               "client_id": "293986053377-l5bjdp2ifq682mo3a4pf12ruv47qe5vp.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "293986053377-6jup8b06g68krbiforieola5is94nm4s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.btfdemoappone"
+              }
             }
           ]
         }
