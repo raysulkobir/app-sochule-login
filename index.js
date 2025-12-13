@@ -1,6 +1,8 @@
 /**
  * @format
  */
+import crashlytics from '@react-native-firebase/crashlytics';
+crashlytics().setCrashlyticsCollectionEnabled(true);
 
 import { AppRegistry } from 'react-native';
 import App from './App';

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Text, TouchableOpacity, StyleSheet, View, Alert } from 'react-native';
 import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-signin';
 import { LoginManager, AccessToken, Profile } from 'react-native-fbsdk-next';
+import { Button } from 'react-native';
 
 export default function GoogleLogin() {
     useEffect(() => {
@@ -76,6 +77,10 @@ console.log('userData', userData);
             </TouchableOpacity>
             <TouchableOpacity onPress={loginWithFacebook} style={[styles.button,{marginTop: 16}]}>
                 <Text style={styles.text}>Sign in with facebook</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={()=>kkk}>
+               <Text>hiii</Text> 
             </TouchableOpacity>
         </View>
     );
