@@ -17,6 +17,14 @@ end
 target 'btfDemoAppOne' do
   config = use_native_modules!
 
+  # Apply modular headers only to specific pods that need it
+  pod 'FirebaseCore', :modular_headers => true
+  pod 'FirebaseInstallations', :modular_headers => true
+  pod 'GoogleDataTransport', :modular_headers => true
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'nanopb', :modular_headers => true
+  pod 'FirebaseCoreExtension', :modular_headers => true
+
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.
@@ -30,5 +38,12 @@ target 'btfDemoAppOne' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+    
+    # Additional fix for module compatibility
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'NO'
+      end
+    end
   end
 end
