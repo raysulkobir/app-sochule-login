@@ -46,7 +46,7 @@
 	<key>FacebookAppID</key>
 	<string>1527541168483203</string>
 	<key>FacebookClientToken</key>
-<string>d71ca476b5079e7cc7cab05eea1069ab</string>
+	<string>d71ca476b5079e7cc7cab05eea1069ab</string>
 	<key>FacebookDisplayName</key>
 	<string>BTFDemoAppOn</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -62,6 +62,11 @@
 	<string></string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+		<string>fetch</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
