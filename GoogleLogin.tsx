@@ -78,10 +78,7 @@ console.log('userData', userData);
             <TouchableOpacity onPress={loginWithFacebook} style={[styles.button,{marginTop: 16}]}>
                 <Text style={styles.text}>Sign in with facebook</Text>
             </TouchableOpacity>
-
-            <TouchableOpacity onPress={()=>kkk}>
-               <Text>hiii</Text> 
-            </TouchableOpacity>
+ 
         </View>
     );
 }
